@@ -46,7 +46,7 @@ while game_playing
     win.win_combos(player_o, 'Player O')
     $turn += 1
   end
-  
+
   if $win == true
     game_playing = false
     puts "Congratulations #{$winner}! You are the winner!"
