@@ -9,11 +9,12 @@ class WinCombinations
         arr.each do |space|
           check_array.push(space) if slot.include?(space)
           next unless possible_wins.include?(check_array)
-          $win = true
-          $winner = player
+          return $win = true
+          return $winner = player
         end
       end
     end
+    return $win = false
   end
 end
 
