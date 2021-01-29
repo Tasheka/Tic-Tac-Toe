@@ -27,11 +27,11 @@ require_relative './../lib/board'
       board.initialize_board
       slot_selected = gets.chomp.to_i
       player_x.push(slot_selected)
-      $turn += 1
       val = Validation.new
       val.next_turn(slot_selected, 'X')
       win = WinCombinations.new
       win.win_combos(player_x, 'Player X')
+      $turn += 1
 
     elsif $turn.even?
       puts "It's your turn again Player O."
@@ -40,11 +40,11 @@ require_relative './../lib/board'
       board.initialize_board
       slot_selected = gets.chomp.to_i
       player_o.push(slot_selected)
-      $turn += 1
       val = Validation.new
       val.next_turn(slot_selected, 'O')
       win = WinCombinations.new
       win.win_combos(player_o, 'Player O')
+      $turn += 1
     end
     if $win == true
       game_playing = false
