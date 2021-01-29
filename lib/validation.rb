@@ -1,4 +1,6 @@
 # rubocop:disable Style/RedundantReturn
+# rubocop:disable Style/GuardClause
+
 class Validation
   $available_slots = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -15,3 +17,4 @@ class Validation
 end
 
 # rubocop:enable Style/RedundantReturn
+# rubocop:enable Style/GuardClause

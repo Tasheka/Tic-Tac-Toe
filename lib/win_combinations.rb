@@ -1,4 +1,4 @@
-# rubocop:disable Style/GuardClause
+# rubocop:disable Lint/UnreachableCode
 
 class WinCombinations
   def win_combos(slot, player)
@@ -9,13 +9,14 @@ class WinCombinations
         arr.each do |space|
           check_array.push(space) if slot.include?(space)
           next unless possible_wins.include?(check_array)
+
           return $win = true
-          return $winner = player
+          $winner = player
         end
       end
     end
-    return $win = false
+    $win = false
   end
 end
 
-# rubocop:enable Style/GuardClause
+# rubocop:enable Lint/UnreachableCode
